@@ -95,12 +95,40 @@
 
 
 window.addEventListener("load", function () {
+    const template = [
+        {
+            content: function (data) {
+                const itemsWithData = [];
+                for (let i = 0; i < data.length; i++) {
+                    itemsWithData[itemsWithData.length] = {element: document.createElement("li"), data: data[i] }
+                }
+                return itemsWithData;
+            },
+            type: "function",
+            children: [
+                {
+                    content: "h3",
+                    type: "tag",
+                    child: {
+                        type: "function",
+                        content: function (data, parent) {
+
+                        }
+                    }
+                }
+            ]
+        }
+    ];
+    
     fetch("https://api.themoviedb.org/3/discover/movie?primary_release_date.gte=2014-09-15&primary_release_date.lte=2014-10-22&api_key=91e0bf2847df0304e6f6dc4be0546cf2")
     .then(function(response) {
         return response.json();
     })
     .then(function(myJson) {
         console.log(myJson);
+        console.log("templateEngine", templateEngine, myJson);
+        
+        templateEngine.render(template, document.getElementById("shop-list"), myJson.results);
     }).catch(function (error) {
         console.log(error);
     });
