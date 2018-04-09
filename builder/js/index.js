@@ -95,5 +95,15 @@
 
 
 window.addEventListener("load", function () {
+    fetch("https://api.themoviedb.org/3/discover/movie?primary_release_date.gte=2014-09-15&primary_release_date.lte=2014-10-22&api_key=91e0bf2847df0304e6f6dc4be0546cf2")
+    .then(function(response) {
+        return response.json();
+    })
+    .then(function(myJson) {
+        console.log(myJson);
+    }).catch(function (error) {
+        console.log(error);
+    });
     // https://api.themoviedb.org/3/movie/550?api_key=91e0bf2847df0304e6f6dc4be0546cf2
 });
+// /discover/movie?primary_release_date.gte=2014-09-15&primary_release_date.lte=2014-10-22
