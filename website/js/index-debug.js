@@ -1,4 +1,4 @@
-(function() {
+const handleDrag = (function() {
 
     const handleDrag = {
         init: function () {
@@ -30,11 +30,14 @@
             // console.log(e.target.parentElement.id);
             
             e.dataTransfer.setData("text/plain", e.target.parentElement.id);
+
+            document.getElementsByTagName("body")[0].classList.add("dragging-enabled");
         },
         end: function (e) {
             console.log("end");
             
             e.target.classList.remove("dragged");
+            document.getElementsByTagName("body")[0].classList.remove("dragging-enabled");
         },
         dragOver: function (e) {
             
@@ -62,7 +65,6 @@
         drop: function (e) {
             
             if (e.stopPropagation) e.stopPropagation();
-            console.log("drop");
             
             const listItemParentElement = document.getElementById(e.dataTransfer.getData("text/plain"));
             if (listItemParentElement != e.target) {
@@ -90,7 +92,7 @@
     };
 
     handleDrag.init();
-
+    return handleDrag;
 })();
 
 
@@ -100,7 +102,10 @@ window.addEventListener("load", function () {
             content: function (data) {
                 const itemsWithData = [];
                 for (let i = 0; i < data.length; i++) {
-                    itemsWithData[itemsWithData.length] = {element: document.createElement("li"), data: data[i] }
+                    const newElement = document.createElement("li");
+                    newElement.setAttribute("draggable", "true")
+                    itemsWithData[itemsWithData.length] = {element: newElement, data: data[i] }
+                    handleDrag.setListenersForItem(newElement);
                 }
                 return itemsWithData;
             },
@@ -112,7 +117,19 @@ window.addEventListener("load", function () {
                     child: {
                         type: "function",
                         content: function (data, parent) {
-
+                            parent.textContent = data.title;
+                            
+                        }
+                    }
+                },
+                {
+                    content: "img",
+                    type: "tag",
+                    child: {
+                        type: "function",
+                        content: function (data, parent) {
+                            parent.src = "http://image.tmdb.org/t/p/w185/" + data.poster_path;
+                            parent.alt = data.title;
                         }
                     }
                 }
