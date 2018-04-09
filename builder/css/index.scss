@@ -1,0 +1,32 @@
+
+[draggable=true] {
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-drag: element;
+    cursor: move;
+}
+li {
+    width: 5rem;
+    height: 5rem;
+    background-color: red;
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+
+li.dragged {
+    opacity: 0.6;
+}
+
+main {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 1fr;
+    > * {
+        
+    }
+}
+
+ul {
+    // width: 50vw;
+    min-height: 100vh;
+}
