@@ -10,7 +10,17 @@ body {
     cursor: move;
 }
 
+body > header {
+    width: 100%;
+    background-color: rgb(0,0,50);
+    color: white;
+}
 
+h1 {
+    padding: 2rem;
+    margin: 0;
+    color: inherit;
+}
 
 main {
     display: grid;
@@ -52,6 +62,7 @@ ul {
         }
         position: relative;
         &:not(.dragged):hover {
+            box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.3);
             h3 {
                 opacity: 1;
             }
@@ -82,6 +93,16 @@ ul {
     }
 }
 
+.order-list-container {
+    position: fixed;
+    right: 0;
+    width: 10rem;
+    
+    .drag-list {
+        max-height: 80vh;
+        overflow-y: scroll;
+    }
+}
 
 
 body.dragging-enabled .drag-list {
