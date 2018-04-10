@@ -6,14 +6,14 @@
 ![Title order-movies](readme-content/title.png)
 
 
-It might be a little bit BIGGER.
+The title BIGGER? 
 
 
 ---
 
 ## Missing some clarity
 
-This interface is missing some clarity about how to order things. A zero state might be handy in this case.
+This interface is missing some clarity about how to order shop items. A zero state might be handy in this case.
 
 Need:
 `16. A crucial moment: the zero state`
@@ -24,7 +24,7 @@ Need:
 
 `11. Strong visual hierarchies work best`
 
-By hidding the image and only showing the title, it will make the item the most visible element on the interface. The title on it which is ridiculously big gives it extra attention. There is also a low visible background shadow which lift the item up.
+By hidding the image and only show the title, it will make the item the most visible element on the interface. The title which is ridiculously big gives the item even more attention. There is also a low visible background shadow which lift the item up.
 
 
 ![Hover and dominates](readme-content/hover.png)
