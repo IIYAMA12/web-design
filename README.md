@@ -8,6 +8,8 @@
 
 The title BIGGER? 
 
+- [ ] Bigger?
+- [ ] Or smaller?
 
 ---
 
@@ -17,6 +19,8 @@ This interface is missing some clarity about how to order shop items. A zero sta
 
 Need:
 `16. A crucial moment: the zero state`
+
+- [ ] Zero state
 
 ---
 

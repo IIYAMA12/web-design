@@ -29,8 +29,11 @@ const handleDrag = (function() {
             e.target.classList.add("dragged");
             // console.log(e.target.parentElement.id);
             
-            e.dataTransfer.setData("text/plain", e.target.parentElement.id);
-
+            if (e.target.parentElement.classList.contains("drop-container")) {
+                e.dataTransfer.setData("text/plain", e.target.parentElement.parentElement.id);
+            } else {
+                e.dataTransfer.setData("text/plain", e.target.parentElement.id);
+            }
             document.getElementsByTagName("body")[0].classList.add("dragging-enabled");
         },
         end: function (e) {
@@ -41,7 +44,7 @@ const handleDrag = (function() {
         },
         dragOver: function (e) {
             
-            console.log("over", e.target);
+            // console.log("over", e.target);
             const listItemParentElement = document.getElementById(e.dataTransfer.getData("text/plain"));
             if (listItemParentElement == e.target) {
                 e.dataTransfer.dropEffect = "none";
@@ -78,8 +81,18 @@ const handleDrag = (function() {
                         handleDrag.setListenersForItem(copy);
                     });
                     
-                    e.target.appendChild(copy);
+                    let dropContainer = e.target;
+                    const newDropContainer = dropContainer.getElementsByClassName("drop-container")[0];
+                    if (newDropContainer != undefined) {
+                        dropContainer = newDropContainer;
+                    }
+                    dropContainer.appendChild(copy);
                 } else if (e.target.classList.contains("drag-delete")) {
+                    // let dropContainer = e.target;
+                    // const newDropContainer = dropContainer.getElementsByClassName("drop-container")[0];
+                    // if (newDropContainer != undefined) {
+                    //     dropContainer = newDropContainer;
+                    // }
                     listItem.parentElement.removeChild(listItem);
                 }
                 // el.parentNode.removeChild(el);  

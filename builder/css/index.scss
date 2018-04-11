@@ -1,3 +1,8 @@
+:root {
+    --order-list-width: 12rem; 
+    --items-margin: 3rem;
+}
+
 body {
     margin: 0;
     font-family: sans-serif;
@@ -20,6 +25,7 @@ h1 {
     padding: 2rem;
     margin: 0;
     color: inherit;
+    font-size: 5em;
 }
 
 main {
@@ -44,11 +50,11 @@ ul {
     flex-wrap: wrap;
 
 
-    margin: 0 -1rem 0 0;
+    margin: 0 calc(- var(--items-margin)) 0 0;
     li {
         flex-grow: 1;
         width: 15rem;
-        margin: 0 1rem 1rem 0;
+        margin: 0 var(--items-margin) var(--items-margin) 0;
         // height: -webkit-fit-content;
         // height: -moz-fit-content;
         // height: fit-content;
@@ -81,7 +87,9 @@ ul {
         color: white;
         font-size: 300%;
         opacity: 0;
-        margin: 0.5rem 0.5rem 0 0.5rem;
+        padding: 0.5rem 0.5rem 0 0.5rem;
+        box-sizing: border-box;
+        margin: 0;
     }
     img {
         pointer-events: none;
@@ -94,14 +102,32 @@ ul {
 }
 
 .order-list-container {
-    position: fixed;
-    right: 0;
-    width: 10rem;
-    
-    .drag-list {
-        max-height: 80vh;
-        overflow-y: scroll;
+    width: var(--order-list-width);
+    box-sizing: border-box;
+    background-color: rgb(220, 220, 220);
+    > div {
+        position: fixed;
+        width: calc(var(--order-list-width) - 4rem);
     }
+    .drag-list {
+        
+        // right: 0;
+        // max-height: 80vh;
+        overflow-y: scroll;
+        height: 100vh;
+        width: inherit;
+        > div {
+            width: inherit;
+        }
+        li {
+            height: 8rem;
+            width: inherit;
+        }
+    }
+}
+
+.drop-container {
+    position: relative;
 }
 
 
@@ -114,4 +140,9 @@ body.dragging-enabled .drag-list {
         pointer-events: none;
         opacity: 0.3;
     }
+
+    > div {
+        pointer-events: none;
+    }
+ 
 }
