@@ -41,7 +41,8 @@ Too much or just enough?
 Wouldn't it be nice to drag things? 
 
 
-- [ ] Do not show raster on start item list.
+When dragging
+- [ ] Do not show the raster on the list where the item is located at the moment.
 - [ ] Label. (Drag to here / Add to order list / Delete)
 - [ ] Trash bin Icon might help supporting the label.
 
