@@ -1,11 +1,12 @@
 const handleDrag = (function() {
 
+   
     const handleDrag = {
         init: function () {
             const draggableContent = document.querySelectorAll("[draggable=true]");
             for (let index = 0; index < draggableContent.length; index++) {
                 const element = draggableContent[index];
-                this.setListenersForItem(element);
+                this.setDragListenersForItem(element);
             }
             const draggableContentLists = document.querySelectorAll("ul");
             for (let index = 0; index < draggableContentLists.length; index++) {
@@ -18,9 +19,17 @@ const handleDrag = (function() {
             }
             // https://stackoverflow.com/questions/12332403/html5-ul-li-draggable
         },
-        setListenersForItem: function (element) {
+        setDragListenersForItem: function (element) {
             element.addEventListener("dragstart", this.start, false);
             element.addEventListener("dragend", this.end, false);
+            element.addEventListener("mouseover", this.startFeedForwards, false);
+            element.addEventListener("mouseout", this.endFeedForwards, false);
+        },
+        startFeedForwards: function (e) {
+
+        },
+        endFeedForwards: function (e) {
+
         },
         start: function (e) {
             console.log("start");
@@ -31,9 +40,14 @@ const handleDrag = (function() {
             
             if (e.target.parentElement.classList.contains("drop-container")) {
                 e.dataTransfer.setData("text/plain", e.target.parentElement.parentElement.id);
+                e.target.parentElement.parentElement.classList.add("start-drag-list");
             } else {
                 e.dataTransfer.setData("text/plain", e.target.parentElement.id);
+                e.target.parentElement.classList.add("start-drag-list");
+                
             }
+
+            
             document.getElementsByTagName("body")[0].classList.add("dragging-enabled");
         },
         end: function (e) {
@@ -41,6 +55,8 @@ const handleDrag = (function() {
             
             e.target.classList.remove("dragged");
             document.getElementsByTagName("body")[0].classList.remove("dragging-enabled");
+
+            document.getElementsByClassName("start-drag-list")[0].classList.remove("start-drag-list");
         },
         dragOver: function (e) {
             
@@ -78,7 +94,7 @@ const handleDrag = (function() {
                     const copy = listItem.cloneNode(true);
                     copy.classList.remove("dragged");
                     setTimeout(function (){
-                        handleDrag.setListenersForItem(copy);
+                        handleDrag.setDragListenersForItem(copy);
                     });
                     
                     let dropContainer = e.target;
@@ -109,6 +125,22 @@ const handleDrag = (function() {
 })();
 
 
+
+window.addEventListener("scroll", function () {
+     
+    const top = this.scrollY,
+        left = this.scrollX;
+    const boundingBox = document.querySelector("body > header").getBoundingClientRect();
+        console.log("top:", top, "height:", boundingBox.height);
+    let offset = boundingBox.height - top;
+    if (offset < 0) {
+        offset = 0;
+    }
+    if (offset == 0) {
+        // document.quer
+    }
+});
+
 window.addEventListener("load", function () {
     const template = [
         {
@@ -118,7 +150,7 @@ window.addEventListener("load", function () {
                     const newElement = document.createElement("li");
                     newElement.setAttribute("draggable", "true")
                     itemsWithData[itemsWithData.length] = {element: newElement, data: data[i] }
-                    handleDrag.setListenersForItem(newElement);
+                    handleDrag.setDragListenersForItem(newElement);
                 }
                 return itemsWithData;
             },
