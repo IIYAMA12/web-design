@@ -194,7 +194,6 @@ window.addEventListener("load", function () {
         return response.json();
     })
     .then(function(myJson) {
-        console.log(myJson);
         console.log("templateEngine", templateEngine, myJson);
         
         templateEngine.render(template, document.getElementById("shop-list"), myJson.results);
