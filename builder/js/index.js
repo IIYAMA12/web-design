@@ -131,13 +131,20 @@ window.addEventListener("scroll", function () {
     const top = this.scrollY,
         left = this.scrollX;
     const boundingBox = document.querySelector("body > header").getBoundingClientRect();
-        console.log("top:", top, "height:", boundingBox.height);
+    
     let offset = boundingBox.height - top;
     if (offset < 0) {
         offset = 0;
     }
+
+    const asideContainer = document.querySelector(".order-list-container > div");
+    
     if (offset == 0) {
-        // document.quer
+        asideContainer.style.top = "2rem";
+    } else if (top == 0) {
+        asideContainer.style.top = "unset";
+    } else {
+        asideContainer.style.top = "calc(" + offset + "px + 2rem)";
     }
 });
 
