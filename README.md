@@ -85,7 +85,7 @@ When dragging
 ## Experimental item list hierarchy
 
 
-![Ordered items](shopping-items.png)
+![Ordered items](readme-content/shopping-items.png)
 
 I wanted the items `before` and `after` the targeted element, having different styling. By using a matrix you can create nice looking perspective styling.
 A tool to generate matrix CSS code: [matrix3d](http://ds-overdesign.com/transform/matrix3d.html) 
