@@ -29,14 +29,14 @@ Need:
 
 ---
 
-## Dominates on item, which becomes visible hover over it
+## Dominates on item text, which becomes visible when hover over it
 
 `11. Strong visual hierarchies work best`
 
-By hidding the image and only show the title, it will make the item the most visible element on the interface. The title which is ridiculously big gives the item even more attention. There is also a low visible background shadow which lift the item up.
+While hovering over an item, it will hide the image and show the title large on top. This will make the item the most visible element on the interface. The title which is ridiculously big gives the item even more attention. There is also a low visible background shadow which lift the item up.
 
 ![Hover](zero-state-hover.png)
-
+Hover over an item
 
 <details>
     <summary>Older version</summary>
@@ -54,7 +54,7 @@ Wouldn't it be nice to drag things?
 
 
 ![Zero state](zero-state-hover.png)
-
+While hovering, zero-state veisible on right bottom.
 
 <details>
     <summary>Older version</summary>
