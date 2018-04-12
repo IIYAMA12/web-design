@@ -13,7 +13,7 @@ Buying movies!
     <p>"Order movies ofcourse!" That is what the title says atleast.</p>
 </details>
 
-The title BIGGER? 
+### Make the title BIGGER? 
 
 - [ ] Bigger?
 - [ ] Or smaller?
@@ -39,6 +39,7 @@ Need:
 While hovering over an item, it will hide the image and show the title large on top. This will make the item the most visible element on the interface. The title which is ridiculously big gives the item even more attention. There is also a low visible background shadow which lift the item up.
 
 ![Hover](zero-state-hover.png)
+
 Hover over an item
 
 <details>
@@ -60,7 +61,8 @@ Wouldn't it be nice to drag things?
 
 
 ![Zero state](zero-state-hover.png)
-While hovering, zero-state visible on right bottom.
+
+While hovering, the zero-state becomes visible on right bottom.
 
 <details>
     <summary>Older version</summary>
