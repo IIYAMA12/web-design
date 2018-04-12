@@ -38,7 +38,7 @@ Need:
 
 While hovering over an item, it will hide the image and show the title large on top. This will make the item the most visible element on the interface. The title which is ridiculously big gives the item even more attention. There is also a low visible background shadow which lift the item up.
 
-![Hover](zero-state-hover.png)
+![Hover](readme-content/zero-state-hover.png)
 
 Hover over an item
 
@@ -60,7 +60,7 @@ Hover over an item
 Wouldn't it be nice to drag things?
 
 
-![Zero state](zero-state-hover.png)
+![Zero state](readme-content/zero-state-hover.png)
 
 While hovering, the zero-state becomes visible on right bottom.
 
@@ -86,8 +86,10 @@ When dragging
 
 ## Experimental item list hierarchy
 
-
-![Ordered items](readme-content/shopping-items.png)
+<details>
+    <summary>Experimental item list</summary>
+    <img alt="Ordered items" src="https://raw.githubusercontent.com/IIYAMA12/web-design/master/readme-content/shopping-items.png">
+</details>
 
 I wanted the items `before` and `after` the targeted element, having different styling. By using a matrix you can create nice looking perspective styling.
 A tool to generate matrix CSS code: [matrix3d](http://ds-overdesign.com/transform/matrix3d.html) 
