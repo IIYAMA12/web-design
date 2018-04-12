@@ -4,11 +4,13 @@
 
 ## What can I do on this website?
 
-
 ![Title order-movies](readme-content/title-new.png)
 
-Buying movies!
+Buying movies ofcourse! 
+Which is not yet possible unfortunately, but you can drag and drop items to your shopping list.
 
+### Drag and drop implementation
+I have never implemented the drag and drop features in one of my websites before. So this was a new experience for me. And I am impressed that it isn't very easy to build it correctly. There are so many things can go wrong and all related to the browser default behaviour. At the end I made a terrible mistake by removing the pointer events from the element that I was dragging, this caused Firefox to Glitch out and the drag/drop events were broken on that tab.
 
 
 <details>
