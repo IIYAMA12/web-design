@@ -142,7 +142,6 @@ window.addEventListener("scroll", function () {
     if (offset == 0) {
         asideContainer.style.top = "2rem";
         dragList.style.height = "calc(" + boundingBox.height + "px + 75vh)";
-        console.log("offset = 0");
     } else if (top == 0) {
         asideContainer.style.top = "unset";
         

@@ -260,10 +260,10 @@ body.dragging-enabled .drag-list {
     }
 
     &:not(.start-drag-list) {
-        background: rgba(0,0,0,0) url("../img/background-raster.svg") repeat;
+        background: rgba(0,0,0,0) url("../img/background-raster-add-bigger.svg") repeat;
         background-size: 2rem;
         &.drag-delete {
-            background: rgba(0,0,0,0) url("../img/background-raster-delete.svg") repeat;
+            background: rgba(0,0,0,0) url("../img/background-raster-delete-bigger.svg") repeat;
             background-size: 2rem;
         }
     }
