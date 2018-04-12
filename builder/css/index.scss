@@ -19,8 +19,13 @@ body {
 
 body > header {
     width: 100%;
-    background-color: rgb(0,0,50);
-    color: white;
+    > div {
+        background-color: rgb(0,0,50);
+        color: white;
+        box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.2);
+        z-index: 2;
+        position: relative;
+    }
 }
 
 h1 {
@@ -125,8 +130,8 @@ ul {
             }
             img {
                 opacity: 0.1;
-                height: 100%;
-                width: auto;
+                // height: 100%;
+                // width: auto;
             }
         }
 
@@ -170,23 +175,66 @@ ul {
     width: var(--order-list-width);
     box-sizing: border-box;
     background-color: rgb(220, 220, 220);
+
+    padding: 2rem 0;
+
+    h2 {
+        margin-left: 2rem; 
+        margin-right: 2rem; 
+    }
+
     > div {
         position: fixed;
-        width: calc(var(--order-list-width) - 4rem);
+        // width: calc(var(--order-list-width) - 4rem);
+        width: calc(var(--order-list-width));
+        // width: 100%;
+        > img {
+            display: block;
+            margin: auto;
+            width: 50%;
+        }
     }
+
     .drag-list {
         
         // right: 0;
         // max-height: 80vh;
         overflow-y: scroll;
         height: 70vh;
-        width: inherit;
+        padding: 2rem;
+        // width: calc(var(--order-list-width) - 4rem);
+        box-sizing: border-box;
+        // width: inherit;
         > div {
-            width: inherit;
+            width: 100%;
+        }
+
+        &:hover li {
+            transform: matrix3d(1,0,0.00,0,0.00,0.87,0.50,-0.001,0,-0.5,0.87,0,0,0,0,1);
+            -webkit-transform: matrix3d(1,0,0.00,0,0.00,0.87,0.50,-0.001,0,-0.5,0.87,0,0,0,0,1);
         }
         li {
             height: 8rem;
             width: inherit;
+            margin: 0;
+            position: relative;
+
+
+            &:hover {
+                
+                z-index: 10;
+                ~ li {
+                    // transform: skewX(20deg);
+                    // transform: skew(10deg, 10deg);
+                    transform: matrix3d(1,0,0.00,0,0.00,0.87,0.50,0.001,0,-0.5,0.87,0,0,0,0,1);
+                    -webkit-transform: matrix3d(1,0,0.00,0,0.00,0.87,0.50,0.001,0,-0.5,0.87,0,0,0,0,1);
+                    
+                }
+            }
+            &:last-child {
+                margin-bottom: 2rem;
+            }
+
         }
     }
 }
@@ -196,18 +244,7 @@ ul {
 }
 
 
-body.dragging-enabled .drag-list:not(.start-drag-list) {
-    
-
-    background: rgba(0,0,0,0) url("../img/background-raster.svg") repeat;
-    background-size: 2rem;
-    &.drag-delete {
-        background: rgba(0,0,0,0) url("../img/background-raster-delete.svg") repeat;
-        background-size: 2rem;
-    }
-
-    
-
+body.dragging-enabled .drag-list {
     li {
         pointer-events: none;
         opacity: 0.3;
@@ -216,5 +253,13 @@ body.dragging-enabled .drag-list:not(.start-drag-list) {
     > div {
         pointer-events: none;
     }
- 
+
+    &:not(.start-drag-list) {
+        background: rgba(0,0,0,0) url("../img/background-raster.svg") repeat;
+        background-size: 2rem;
+        &.drag-delete {
+            background: rgba(0,0,0,0) url("../img/background-raster-delete.svg") repeat;
+            background-size: 2rem;
+        }
+    }
 }
