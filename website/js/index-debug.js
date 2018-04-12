@@ -193,6 +193,18 @@ window.addEventListener("load", function () {
                             parent.alt = data.title;
                         }
                     }
+                },
+                {
+                    content: "img",
+                    type: "tag",
+                    child: {
+                        type: "function",
+                        content: function (data, parent) {
+                            parent.src = "img/drag-instruction.svg";
+                            parent.alt = "Drag instruction";
+                            parent.classList.add("drag-instruction");
+                        }
+                    }
                 }
             ]
         }

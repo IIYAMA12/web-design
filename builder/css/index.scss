@@ -69,6 +69,8 @@ ul {
     }
 }
 
+
+
 .drag-list {
 
     // width: 50vw;
@@ -107,6 +109,10 @@ ul {
             transform: scale(1.1);
             box-shadow: 0px 0px 14px 5px rgba(0,0,0,0.3);
             font-size: 200%;
+            .drag-instruction {
+                display: block;
+                visibility: visible;
+            }
         }
 
         &.dragged {
@@ -159,7 +165,7 @@ ul {
         position: absolute;
         text-shadow: 0px 0px 1px rgba(150, 150, 150, 1);
     }
-    img {
+    img:not(.drag-instruction) {
         pointer-events: none;
         width: 100%;
         transition: opacity 0.6s;
@@ -170,6 +176,43 @@ ul {
         // top: 0;
     }
 }
+
+.drag-instruction {
+    display: none;
+    visibility: hidden;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 40%;
+    height: auto;
+    display: block;
+    pointer-events: none;
+    opacity: 1 !important;
+}
+
+.order-list-container .drag-instruction {
+    display: none !important;
+    visibility: hidden !important;
+}
+
+
+.order-list-container {
+    li {
+        &:hover {
+            font-size: 100%;
+        }
+        &:not(.dragged):hover {
+            
+            h3 {
+                // opacity: 1;
+                bottom: 0;
+                top: unset;
+                left: unset;
+                // position: absolute;
+            }
+        }
+    }
+} 
 
 .order-list-container {
     width: var(--order-list-width);
