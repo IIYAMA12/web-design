@@ -3,8 +3,12 @@
 ## What can I do on this website?
 "Order movies ofcourse!" That is what the title says atleast.
 
-![Title order-movies](readme-content/title.png)
+![Title order-movies](readme-content/title-new.png)
 
+<details>
+    <summary>Older version</summary>
+    <img alt="Version 1.0.0" src="https://raw.githubusercontent.com/IIYAMA12/web-design/master/readme-content/title.png">
+</details>
 
 The title BIGGER? 
 
@@ -20,7 +24,8 @@ This interface is missing some clarity about how to order shop items. A zero sta
 Need:
 `16. A crucial moment: the zero state`
 
-- [ ] Zero state
+- [ ] Zero state (partly added)
+
 
 ---
 
@@ -30,26 +35,39 @@ Need:
 
 By hidding the image and only show the title, it will make the item the most visible element on the interface. The title which is ridiculously big gives the item even more attention. There is also a low visible background shadow which lift the item up.
 
+![Hover](zero-state-hover.png)
 
-![Hover and dominates](readme-content/hover.png)
 
-Too much or just enough?
+<details>
+    <summary>Older version</summary>
+    <img alt="Version 1.0.0" src="https://raw.githubusercontent.com/IIYAMA12/web-design/master/readme-content/title.png">
+</details>
 
 ---
 
-## Dagging
+## Dagging (+ zero state)
 
 `5. Direct manipulation is best`
 `6. One primary action per screen`
 
-Wouldn't it be nice to drag things? 
+Wouldn't it be nice to drag things?
+
+
+![Zero state](zero-state-hover.png)
+
+
+<details>
+    <summary>Older version</summary>
+    <img alt="Version 1.0.0" src="https://raw.githubusercontent.com/IIYAMA12/web-design/master/readme-content/drag.png">
+</details>
+
+![Hover](readme-content/hover-effect.gif)
+Adding a lift-up animation which will makes the content fly a bit up, like you can grab it.
 
 
 When dragging
-- [ ] Do not show the raster on the list where the item is located at the moment.
+- [X] Do not show the raster on the list where the item is located at the moment.
+- [X] Lift-up animation.
 - [ ] Label. (Drag to here / Add to order list / Delete)
 - [ ] Trash bin Icon might help supporting the label.
-
-![Dragging item](readme-content/drag.png)
-
-
+- [ ] Tested with users.
