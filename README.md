@@ -1,13 +1,16 @@
 # web-design
 
 ## What can I do on this website?
-"Order movies ofcourse!" That is what the title says atleast.
+
 
 ![Title order-movies](readme-content/title-new.png)
+
+Buying movies!
 
 <details>
     <summary>Older version</summary>
     <img alt="Version 1.0.0" src="https://raw.githubusercontent.com/IIYAMA12/web-design/master/readme-content/title.png">
+    <p>"Order movies ofcourse!" That is what the title says atleast.</p>
 </details>
 
 The title BIGGER? 
@@ -47,14 +50,17 @@ Hover over an item
 
 ## Dagging (+ zero state)
 
-`5. Direct manipulation is best`
+`5. Direct manipulation is best` 
+
+<br>
+
 `6. One primary action per screen`
 
 Wouldn't it be nice to drag things?
 
 
 ![Zero state](zero-state-hover.png)
-While hovering, zero-state veisible on right bottom.
+While hovering, zero-state visible on right bottom.
 
 <details>
     <summary>Older version</summary>
@@ -62,6 +68,7 @@ While hovering, zero-state veisible on right bottom.
 </details>
 
 ![Hover](readme-content/hover-effect.gif)
+
 Adding a lift-up animation which will makes the content fly a bit up, like you can grab it.
 
 
@@ -71,3 +78,14 @@ When dragging
 - [ ] Label. (Drag to here / Add to order list / Delete)
 - [ ] Trash bin Icon might help supporting the label.
 - [ ] Tested with users.
+
+
+---
+
+## Experimental item list hierarchy
+
+
+![Ordered items](shopping-items.png)
+
+I wanted the items `before` and `after` the targeted element, having different styling. By using a matrix you can create nice looking perspective styling.
+A tool to generate matrix CSS code: [matrix3d](http://ds-overdesign.com/transform/matrix3d.html) 
