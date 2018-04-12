@@ -17,6 +17,10 @@ body {
     cursor: move;
 }
 
+.dragged {
+    pointer-events: initial !important;
+}
+
 body > header {
     width: 100%;
     > div {
@@ -192,7 +196,7 @@ ul {
 
 .order-list-container .drag-instruction {
     display: none !important;
-    visibility: hidden !important;
+    visibility: hidden;
 }
 
 
