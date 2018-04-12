@@ -90,7 +90,7 @@ ul {
         // height: -webkit-fit-content;
         // height: -moz-fit-content;
         // height: fit-content;
-        background-color: black;
+        background-color: rgb(10,10,10);
         // padding-bottom: 3rem;
         opacity: 1;
         transition: opacity 0.3s;
@@ -174,8 +174,8 @@ ul {
 .order-list-container {
     width: var(--order-list-width);
     box-sizing: border-box;
-    background-color: rgb(220, 220, 220);
-
+    // background-color: rgb(220, 220, 220);
+    background-color: rgb(60,60,60);
     padding: 2rem 0;
 
     h2 {
@@ -196,11 +196,10 @@ ul {
     }
 
     .drag-list {
-        
         // right: 0;
         // max-height: 80vh;
         overflow-y: scroll;
-        height: 70vh;
+        height: 75vh;
         padding: 2rem;
         // width: calc(var(--order-list-width) - 4rem);
         box-sizing: border-box;
@@ -209,32 +208,38 @@ ul {
             width: 100%;
         }
 
-        &:hover li {
-            transform: matrix3d(1,0,0.00,0,0.00,0.87,0.50,-0.001,0,-0.5,0.87,0,0,0,0,1);
-            -webkit-transform: matrix3d(1,0,0.00,0,0.00,0.87,0.50,-0.001,0,-0.5,0.87,0,0,0,0,1);
-        }
-        li {
-            height: 8rem;
-            width: inherit;
-            margin: 0;
-            position: relative;
+
+        .drop-container {
+            &:hover li {
+                transform: matrix3d(1,0,0.00,0,0.00,0.87,0.50,-0.001,0,-0.5,0.87,0,0,0,0,1);
+            }
+            li {
+
+                height: 8rem;
+                width: inherit;
+                margin: 0;
+                position: relative;
 
 
-            &:hover {
-                
-                z-index: 10;
-                ~ li {
-                    // transform: skewX(20deg);
-                    // transform: skew(10deg, 10deg);
-                    transform: matrix3d(1,0,0.00,0,0.00,0.87,0.50,0.001,0,-0.5,0.87,0,0,0,0,1);
-                    -webkit-transform: matrix3d(1,0,0.00,0,0.00,0.87,0.50,0.001,0,-0.5,0.87,0,0,0,0,1);
+                &:hover {
+                    transform: scale(1.07) !important;
                     
+                    animation: unset;
+
+                    z-index: 10;
+                    ~ li {
+                        // transform: skewX(20deg);
+                        // transform: skew(10deg, 10deg);
+                        transform: matrix3d(1,0,0.00,0,0.00,0.87,0.50,0.001,0,-0.5,0.87,0,0,0,0,1);
+
+                        // transform: initial !important;
+                        // -webkit-transform: initial !important;
+                    }
+                }
+                &:last-child {
+                    margin-bottom: 2rem;
                 }
             }
-            &:last-child {
-                margin-bottom: 2rem;
-            }
-
         }
     }
 }

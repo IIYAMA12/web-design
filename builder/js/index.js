@@ -138,14 +138,24 @@ window.addEventListener("scroll", function () {
     }
 
     const asideContainer = document.querySelector(".order-list-container > div");
-    
+    const dragList = document.querySelector(".order-list-container .drag-list");
     if (offset == 0) {
         asideContainer.style.top = "2rem";
+        dragList.style.height = "calc(" + boundingBox.height + "px + 75vh)";
+        console.log("offset = 0");
     } else if (top == 0) {
         asideContainer.style.top = "unset";
+        
+        dragList.style.height = "75vh";
+
     } else {
         asideContainer.style.top = "calc(" + offset + "px + 2rem)";
+        // dragList.style.height = "75vh";
+        dragList.style.height = "calc(" + (boundingBox.height - offset) + "px + 75vh)";
+
+        // console.log("boundingBox.height", boundingBox.height)
     }
+    
 });
 
 window.addEventListener("load", function () {
