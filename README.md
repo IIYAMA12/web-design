@@ -140,6 +140,7 @@ It is important to keep the user in control of the primary controls. Which is in
 
 Receiving live movie data while reloading the page.
 
+---
 
 ### Custom template engine / Javascript DOM builder
 
@@ -147,6 +148,8 @@ Receiving live movie data while reloading the page.
 <script src="https://iiyama12.github.io/template-engine/template-engine.js"></script>
 ```
 Add the script
+
+---
 
 ```JS
 const template = [
@@ -203,8 +206,14 @@ const template = [
 ```
 Make your `template`/`instruction code`
 
+---
+
 ```JS
 templateEngine.render(template, document.getElementById("shop-list"), myJson.results);
 ```
+
+Render the content
+
+---
 
 Documentation can be found here: [Template engine / DOM builder](https://iiyama12.github.io/template-engine)
