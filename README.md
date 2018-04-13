@@ -9,6 +9,7 @@
 Buying movies ofcourse! 
 Which is not yet possible unfortunately, but you can drag and drop items to your shopping list.
 
+
 ### Drag and drop implementation
 I have never implemented the drag and drop features in one of my websites before. So this was a new experience for me. And I am impressed that it isn't very easy to build it correctly. There are so many things can go wrong and all related to the browser default behaviour. At the end I made a terrible mistake by removing the pointer events from the element that I was dragging, this caused Firefox to Glitch out and the drag/drop events were broken on that tab.
 
@@ -99,3 +100,111 @@ When dragging
 
 I wanted the items `before` and `after` the targeted element, having different styling. By using a matrix you can create nice looking perspective styling.
 A tool to generate matrix CSS code: [matrix3d](http://ds-overdesign.com/transform/matrix3d.html) 
+
+---
+
+## Aside fixed and full screen height when scrolling down.
+
+It is important to keep the user in control of the primary controls. Which is in this case drag and drop. In this prototype, the user has to drag an item from the shopping list and drop it in to the shopping-cart area. In order to keep the this control primary, the user must always have access to it. So for this design I desided to keep your shopping-cart area always fixed on the right side of the screen.
+
+<details>
+    <summary>Aside with the scroll position on top.</summary>
+    <img alt="Aside with the scroll position on top." src="https://raw.githubusercontent.com/IIYAMA12/web-design/master/readme-content/aside-scroll-on-top.png">
+</details>
+
+<details>
+    <summary>Aside with the scroll position a little bit lower than top.</summary>
+    <img alt="Aside with the scroll position a little bit lower than top." src="https://raw.githubusercontent.com/IIYAMA12/web-design/master/readme-content/aside-scroll-on-a-bit-lower.png">
+    <p>Javascript will re-calculate the start position and height of the shopping-cart area.</p>
+</details>  
+
+---
+
+## Extra
+
+### Real data (API)
+
+```JS
+    fetch("https://api.themoviedb.org/3/discover/movie?primary_release_date.gte=2014-09-15&primary_release_date.lte=2014-10-22&api_key=XXXXXXXX")
+    .then(function(response) {
+        return response.json();
+    })
+    .then(function(myJson) {
+        console.log("templateEngine", templateEngine, myJson);
+        
+        templateEngine.render(template, document.getElementById("shop-list"), myJson.results);
+    }).catch(function (error) {
+        console.log(error);
+    });
+```
+
+Receiving live movie data while reloading the page.
+
+
+### Custom template engine / Javascript DOM builder
+
+```HTML
+<script src="https://iiyama12.github.io/template-engine/template-engine.js"></script>
+```
+Add the script
+
+```JS
+const template = [
+    {
+        content: function (data) {
+            const itemsWithData = [];
+            for (let i = 0; i < data.length; i++) {
+                const newElement = document.createElement("li");
+                newElement.setAttribute("draggable", "true")
+                itemsWithData[itemsWithData.length] = {element: newElement, data: data[i] }
+                handleDrag.setDragListenersForItem(newElement);
+            }
+            return itemsWithData;
+        },
+        type: "function",
+        children: [
+            {
+                content: "h3",
+                type: "tag",
+                child: {
+                    type: "function",
+                    content: function (data, parent) {
+                        parent.textContent = data.title;
+                        
+                    }
+                }
+            },
+            {
+                content: "img",
+                type: "tag",
+                child: {
+                    type: "function",
+                    content: function (data, parent) {
+                        parent.src = "http://image.tmdb.org/t/p/w185/" + data.poster_path;
+                        parent.alt = data.title;
+                    }
+                }
+            },
+            {
+                content: "img",
+                type: "tag",
+                child: {
+                    type: "function",
+                    content: function (data, parent) {
+                        parent.src = "img/drag-instruction.svg";
+                        parent.alt = "Drag instruction";
+                        parent.classList.add("drag-instruction");
+                    }
+                }
+            }
+        ]
+    }
+];
+```
+Make your `template`/`instruction code`
+
+```JS
+templateEngine.render(template, document.getElementById("shop-list"), myJson.results);
+```
+
+Documentation can be found here: [Template engine / DOM builder](https://iiyama12.github.io/template-engine)
