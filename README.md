@@ -120,6 +120,42 @@ It is important to keep the user in control of the primary controls. Which is in
 
 ---
 
+
+## Feedback
+
+### Version 1.0.0
+
+<details>
+    <summary>James (Language: NL)</summary>
+    <p>Punt 5: Heb je goed ingezet, maar ik vind de drag and drop nog niet heel duidelijk</p>
+    <p>Punt 6: = goed.</p>
+    <p>Hierarchie is er maar kan sterker, vooral de kopje(h1)</p>
+    <p>Meer wit ruimte zal fijn zijn.</p>
+</details>
+
+<details>
+    <summary>Niels (Language: NL)</summary>
+    <p>Punt 11: Ik mis titels van de films -> Alleen foto (poster) zorgt voor chaos.</p>
+    <p>Punt 11: Titek mag groter (ten opzichte van items & order list).</p>
+    <p>Punt 5: Andere pointer</p>
+    <p>Punt 5: Niet volledig zwart maken op hover. Kies voor meer gebroken zwart of voor lichte opacity.</p>
+    <p>Punt 6: Goed, maar iets meer ruimte tussen films creëren</p>
+</details>
+
+### Version 2.0.0
+
+
+### Readme 1.0.0
+
+<details>
+    <summary>Vasilis (Language: EN)</summary>
+    <p>Edit title "web-design"</p>
+    <p>Add intro information</p>
+    <p>Put question "What can I do on this website?" and answer "Buying movies ofcourse!" closer to each other. Now there is an image in between.</p>
+</details>
+
+---
+
 ## Extra
 
 ### Real data (API)
