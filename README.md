@@ -2,6 +2,8 @@
 
 -- intro --
 
+![Screenshot from mobile web app](readme-content/mobile-screen-shot.png)
+
 
 ## Table of contents
 - [Taal der vormen](#taal-der-vormen)
@@ -93,17 +95,25 @@ Before starting with the filter/sort system, collecting the content first is req
 
 ![Navigation](readme-content/navigation-bar.png)
 
+---
 
 #### Data selection grids
 
 ![Different data selection grids](readme-content/what-are-you-looking-for-points.png)
 
 <details>
-    <summary>Used example</summary>
+    <summary>How does it looks like?</summary>
     <img src="https://github.com/IIYAMA12/web-design/blob/master/readme-content/what-are-you-looking-for-0-100-0.png" alt="Design, programming or/and interactive">
+    <p>Code only</p>
      <img src="https://github.com/IIYAMA12/web-design/blob/master/readme-content/what-are-you-looking-for-50-50-0.png" alt="Design, programming or/and interactive">
+    <p>50% code and 50% design</p>
     <img src="https://github.com/IIYAMA12/web-design/blob/master/readme-content/what-are-you-looking-for-100-0-0.png" alt="Design, programming or/and interactive">
+    <p>Design only</p>
 </details>
+
+---
+
+#### Alternatives
 
 ![Alternative design](readme-content/what-are-you-looking-for-alternative.png)
 In this 3 points example the selected area becomes white and the paths towards it become black.
