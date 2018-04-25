@@ -98,9 +98,9 @@ Before starting with the filter/sort system, collecting the content first is req
 
 ![Different data selection grids](readme-content/what-are-you-looking-for-points.png)
 
-![Design, programming or/and interactive](readme-content/what-are-you-looking-for-0-100-0.png)
 <details>
-    <summary>More examples</summary>
+    <summary>Used example</summary>
+    <img src="https://github.com/IIYAMA12/web-design/blob/master/readme-content/what-are-you-looking-for-0-100-0.png" alt="Design, programming or/and interactive">
      <img src="https://github.com/IIYAMA12/web-design/blob/master/readme-content/what-are-you-looking-for-50-50-0.png" alt="Design, programming or/and interactive">
     <img src="https://github.com/IIYAMA12/web-design/blob/master/readme-content/what-are-you-looking-for-100-0-0.png" alt="Design, programming or/and interactive">
 </details>
@@ -108,9 +108,11 @@ Before starting with the filter/sort system, collecting the content first is req
 ![Alternative design](readme-content/what-are-you-looking-for-alternative.png)
 In this 3 points example the selected area becomes white and the paths towards it become black.
 
-![Alternative design 4 points](readme-content/what-are-you-looking-for-4points-middle-selected.png)
-In this 4 points example the selected area remains black and the paths towards it become also black.
-
+<details>
+    <summary>Alternative with 4 points</summary>
+    <img src="https://github.com/IIYAMA12/web-design/blob/master/readme-content/what-are-you-looking-for-4points-middle-selected.png" alt="Alternative design with 4 points">
+    <p>In this 4 points example the selected area remains black and the paths towards it become also black.</p>
+</details>
 
 ## Testing with Marie
 
