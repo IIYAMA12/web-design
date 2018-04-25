@@ -8,7 +8,7 @@ In this case the users:
 
 
 ![Screenshot from mobile web app](readme-content/mobile-screen-shot.png)
-Version 1.0.0
+Version 1.0.0 (alpha)
 
 ## Table of contents
 - [Taal der vormen](#taal-der-vormen)
@@ -99,7 +99,6 @@ Before starting with the filter/sort system, collecting the content first is req
 ![Mind map](readme-content/mindmap.png)
 [Mind map made with bubbl](https://bubbl.us/)
 
-![Navigation](readme-content/navigation-bar.png)
 
 ---
 
