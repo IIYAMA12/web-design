@@ -1,9 +1,14 @@
 # Portfolio Taal der vormen
 
--- intro --
+This project is about creating a portfolio which is specific for a user/users. Not just a fictive persona or target audience.
+
+In this case the users:
+- Marie
+- Janjaap
+
 
 ![Screenshot from mobile web app](readme-content/mobile-screen-shot.png)
-
+Version 1.0.0
 
 ## Table of contents
 - [Taal der vormen](#taal-der-vormen)
@@ -61,12 +66,11 @@ A usefull tool to make critical images:
 ### Test plan
 
 
-## Focus on Company employees, who check portfolio websites
+## Focus on the user Janjaap
 
 ### What kind of developer are you looking for?
 
 ![Heading "what kind of devloper are you looking for?"](readme-content/what-kind-of-devloper-are-you-looking-for.png)
-Heading level 2. (might become level 1)
 
 While designing this website, I came to the conclusion that I do not know sure which user is going to view this website. So in my opinion it is logic that the user can find the content that she/he is looking for.
 
@@ -74,6 +78,8 @@ Koop R. suggested me to send only the content the user is interested in. Which i
 
 
 ### Process of experimental filter/sort system
+
+Jorik: `"Never judge a user his content preferences by his/her job function."`
 
 
 #### Collecting content
