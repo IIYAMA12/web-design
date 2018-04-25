@@ -113,7 +113,7 @@ Before starting with the filter/sort system, collecting the content first is req
 
 ---
 
-#### Alternatives
+#### Alternative designs
 
 ![Alternative design](readme-content/what-are-you-looking-for-alternative.png)
 In this 3 points example the selected area becomes white and the paths towards it become black.
