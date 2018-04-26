@@ -42,7 +42,7 @@ The second question was more in to the direction of feedback from devices. One o
 
 
 ### Scenario
-Marie, a (motion) designer who is creative, flexible and humorous. She also has an open mind and is willing to learn new things. The boss asks her if she could check the portfolio website of a designer who did made a recent job request. She opens her laptop and clicks on the link her boss send her. The web browser starts to load the page and a website called “Taal der vormen” shows up. Before the website loaded completely, it indicates very clearly that the page has been fully loaded…
+`Marie, a (motion) designer who is creative, flexible and humorous. She also has an open mind and is willing to learn new things. The boss asks her if she could check the portfolio website of a designer who did made a recent job request. She opens her laptop and clicks on the link her boss send her. The web browser starts to load the page and a website called “Taal der vormen” shows up. Before the website loaded completely, it indicates very clearly that the page has been fully loaded…`
 
 ### Prepare product and make changes
 
