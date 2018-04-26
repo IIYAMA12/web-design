@@ -26,7 +26,13 @@ The branding `Taal der vormen` is my personal style, which I have been developin
 
 ### Interview
 
-For the interview I had two questions. The first one was a global question was to confirm that people with a hearing disability can only focus on one thing at the time. In a lot of articles this is mentioned as an issue. 
+Questions prepared:
+- Do you always know when a web page has been fully loaded, when you do not completely focus on the screen? (especially when you are having a conversation with somebody next to you)
+- Some devices making a warning sounds when an action is considered invalid. Did you ever had the problem that they were only given by audio? (or anything related)
+- Do you think that audio is important for using the web/devices?
+- Do you consider phone numbers (on websites) useless?
+
+For the interview I had two important questions. The first one was a global question was to confirm that people with a hearing disability can only focus on one thing at the time. In a lot of articles this is mentioned as an issue. 
 
 - [x] Confirmed that people with hearing disability can only focus on one thing at the time.
 
@@ -34,6 +40,9 @@ The second question was more in to the direction of feedback from devices. One o
 
 - [x] Confirmed that the idea of increasing the loading and loaded contrast might be an improvement.
 
+
+### Scenario
+Marie, a (motion) designer who is creative, flexible and humorous. She also has an open mind and is willing to learn new things. The boss asks her if she could check the portfolio website of a designer who did made a recent job request. She opens her laptop and clicks on the link her boss send her. The web browser starts to load the page and a website called “Taal der vormen” shows up. Before the website loaded completely, it indicates very clearly that the page has been fully loaded…
 
 ### Prepare product and make changes
 
