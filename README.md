@@ -136,9 +136,6 @@ In this 3 points example the selected area becomes white and the paths towards i
 
 [Video: Testing web app](https://www.youtube.com/watch?v=bOpz7gy73bY&feature=youtu.be)
 
-base url
-https://github.com/IIYAMA12/web-design/blob/master/readme-content/
-
 ## Todo
 - [ ] Solve % issue, on "What kind of developer are you looking for?" Not all values are correct.
 - [ ] Buttons must look like buttons and created in the "Taal der vormen" style.
