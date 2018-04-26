@@ -65,6 +65,21 @@ A usefull tool to make critical images:
 
 ### Test plan
 
+#### Focus on 3 aspects
+While testing I will be mainly focus on 3 aspects.
+1. Is the loader of the page considered usefull or annoying?
+2. Is the user able to visit every page of choice without problems?
+3. Is the content sort/filter system clear for the user?
+
+#### Setup
+- Mobile device testing (mobile first design)
+- Camera + tripod (Thanks [Vincent K.](https://github.com/VincentKempers) !)
+
+#### Tasks
+The user shouldn't receive tasks for this website. Because the user comes to a portfolio website for a single purpose, which is viewing a few interesting projects to judge the creator his abilities/skills.
+
+So `NO tasks` and `Figure it out on your own!`
+
 
 ## Focus on the user Janjaap
 
@@ -131,10 +146,21 @@ In this 3 points example the selected area becomes white and the paths towards i
 
 ## Testing with Marie
 
+Known issues: (before testing)
+- Buttons are of data selection grid might not be considered as buttons. [UI/UX Principle #19](https://www.freshconsulting.com/uiux-principle-19-buttons-should-look-like-buttons-links-should-look-like-links/)
+- The language icons on the projects confuse the user on a smartphone because they do not swap with the titles. (which normaly happens when hovering over a project)
 
 [![Testing web app](https://img.youtube.com/vi/bOpz7gy73bY/0.jpg)](https://www.youtube.com/watch?v=bOpz7gy73bY&feature=youtu.be)
 
 [Video: Testing web app](https://www.youtube.com/watch?v=bOpz7gy73bY&feature=youtu.be)
+
+Testing device: Smartphone.
+
+Issues:
+- Buttons are of data selection grid are not considered as buttons. (which was to be expected)
+- The language icons on the projects are surprisely considered as buttons. (Very confusing for the user)
+
+
 
 ## Todo
 - [ ] Solve % issue, on "What kind of developer are you looking for?" Not all values are correct.
