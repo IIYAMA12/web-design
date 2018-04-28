@@ -159,9 +159,11 @@ Known issues: (before testing)
 - Buttons are of data selection grid might not be considered as buttons. [UI/UX Principle #19](https://www.freshconsulting.com/uiux-principle-19-buttons-should-look-like-buttons-links-should-look-like-links/)
 - The language icons on the projects confuse the user on a smartphone because they do not swap with the titles. (which normaly happens when hovering over a project)
 
-------------------------------
-The Video is for private only.
-------------------------------
+------
+
+The Video is not available for the public.
+
+------
 
 Testing device: Smartphone.
 
