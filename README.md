@@ -117,7 +117,7 @@ Before starting with the filter/sort system, collecting the content first is req
 </details>
 
 #### Card sorting
--- card sorting photo coming soon --
+-- card sorting results are applied in mind map --
 
 #### Mind map with relations
 ![Mind map](readme-content/mindmap.png)
